@@ -1,103 +1,113 @@
-﻿namespace Laboratory1;
-
-public class Program2
+﻿﻿namespace Laboratory1
 {
-    public static void RunTask()
+    public class Program2
     {
-        // Масив з 10 цілих чисел
-        int[] a = { 5, 7, 2, 7, 10, 10, 4, 3, 10, 6 };
-        int arraySize = a.Length;
-                
-        // Виводимо створений масив 10 цілих чисел
-        PrintArray("\nМасив \"a\" 10 цілих чисел:", a);
-        
-        // Знаходимо найбільший елемент масиву
-        int maxElement = a.Max();
-        Console.WriteLine("Найбільше значення масиву: {0}", maxElement);
-        
-        // Підраховуємо кількість повторень найбільшого значення
-        Console.WriteLine("Порядкові номери елементів з найбільшим значенням, які повторюються:");
-        int numOfRepeats = 0;
-        for (int i = 0; i < arraySize; i++)
+        public static void RunTask()
         {
-            if (a[i] == maxElement)
+            // Масив з 10 цілих чисел
+            int[] a = { 5, 7, 2, 7, 10, 10, 4, 3, 10, 6 };
+            
+            // Виводимо створений масив 10 цілих чисел
+            PrintArray("\nМасив \"a\" 10 цілих чисел:", a);
+
+            // Знаходимо найбільший елемент масиву
+            int maxElement = a.Max();
+            Console.WriteLine("Найбільше значення масиву: {0}", maxElement);
+
+            // Знаходимо та виводимо порядкові номери елементів з найбільшим значенням, які повторюються
+            var indices = a.Select((value, index) => new { value, index })
+                           .Where(x => x.value == maxElement)
+                           .Select(x => x.index)
+                           .Skip(1); // Пропускаємо перший елемент
+            
+            // Виводимо індекси повторюваних значень
+            Console.WriteLine("Порядкові номери елементів з найбільшим значенням, які повторюються:");
+            foreach (var index in indices)
             {
-                numOfRepeats++;
-                if (numOfRepeats > 1) // Умова, що виведення буде лише повторювальних номерів
+                Console.WriteLine($"a[{index}] = {maxElement}");
+            }
+            Console.WriteLine($"Кількість повторень найбільшого значення: {indices.Count()}");
+
+            // Упорядковуємо масив за спаданням
+            int[] sortedArray = SortArrayDescending(a);
+            PrintArray("\nУпорядкований масив за спаданням:", sortedArray);
+
+            // Введення інтервалу (x, y]
+            int x = ReadIntValue("Введіть значення x: ");
+            int y = ReadIntValue("Введіть значення y: ");
+
+            // Знаходимо добуток елементів, що належать інтервалу (x, y]
+            int product = CalculateProductInRange(sortedArray, x, y);
+
+            // Виведення результатів
+            Console.WriteLine("\nДобуток елементів у інтервалі ({0}, {1}]: {2}", x, y, product);
+            PrintArray("\nМасив після заміни елементів, що не належать інтервалу, на нулі:", sortedArray);
+        }
+
+        // Метод для виведення масиву
+        public static void PrintArray(string header, int[] array)
+        {
+            Console.WriteLine(header);
+            foreach (var item in array)
+            {
+                Console.Write("\t" + item);
+            }
+            Console.WriteLine();
+        }
+
+        // Метод для сортування масиву за спаданням
+        public static int[] SortArrayDescending(int[] array)
+        {
+            int[] sortedArray = (int[])array.Clone(); // Створюємо копію масиву
+            Array.Sort(sortedArray);
+            Array.Reverse(sortedArray);
+            return sortedArray;
+        }
+
+        // Метод для перевірки введення
+        public static int ReadIntValue(string message)
+        {
+            int result;
+            while (true)
+            {
+                Console.Write(message);
+                string input = Console.ReadLine();
+
+                // Перевіряємо, чи є введене значення цілим числом
+                if (int.TryParse(input, out result))
                 {
-                    Console.WriteLine("a[{0}] = {1}", i, a[i]); // Тобто перший елемент не повторююється, тому і не виводиться
+                    break; // Виходимо з циклу, якщо введено коректне значення
+                }
+                else
+                {
+                    Console.WriteLine("Невірне введення! Будь ласка, введіть ціле число.");
                 }
             }
-        }
-        Console.WriteLine("Кількість повторень найбільшого значення: {0}", numOfRepeats-1);
-        
-        // Упорядковуємо масив за спаданням
-        Array.Sort(a); // Сортуємо за зростанням
-        Array.Reverse(a); // Переводимо у спадання
-        PrintArray("\nУпорядкований масив за спаданням:", a);
-        
-        // Введення інтервалу (x, y]
-        int x, y;
-        x = ReadIntValue("Введіть значення x: ");
-        y = ReadIntValue("Введіть значення y: ");
-        
-        // Знаходимо добуток елементів, що належать інтервалу (x, y]
-        int product = 1;
-        bool foundInInterval = false;
 
-        for (int i = 0; i < arraySize; i++)
+            return result;
+        }
+
+        // Метод для розрахунку добутку елементів у інтервалі (x, y]
+        public static int CalculateProductInRange(int[] array, int x, int y)
         {
-            if (a[i] > x && a[i] <= y)
-            {
-                product *= a[i];
-                foundInInterval = true;
-            }
-            else
-            {
-                a[i] = 0; // Заміна всіх інших елементів на нулі
-            }
-        }
+            int product = 1;
+            bool foundInInterval = false;
 
-        // Якщо не знайшли жодного елемента в інтервалі, ставимо добуток 0
-        if (!foundInInterval)
-        {
-            product = 0;
-        }
-
-        Console.WriteLine("\nДобуток елементів у інтервалі ({0}, {1}]: {2}", x, y, product);
-        PrintArray("\nМасив після заміни елементів, що не належать інтервалу, на нулі:", a);
-    }
-    // Метод для виведення масиву
-    public static void PrintArray(string header, int[] a) {
-        Console.WriteLine(header);
-        int i;
-        for (i = 0; i < a.Length; ++i)
-        {
-            Console.Write("\t" + a[i]);
-        }
-        Console.WriteLine();
-    }
-    
-    // Метод для перевірки введення
-    static int ReadIntValue(string message)
-    {
-        int result;
-        while (true)
-        {
-            Console.Write(message);
-            string input = Console.ReadLine();
-
-            // Перевіряємо, чи є введене значення цілим числом
-            if (int.TryParse(input, out result))
+            for (int i = 0; i < array.Length; i++)
             {
-                break; // Виходимо з циклу, якщо введено коректне значення
+                if (array[i] > x && array[i] <= y)
+                {
+                    product *= array[i];
+                    foundInInterval = true;
+                }
+                else
+                {
+                    array[i] = 0; // Заміна всіх інших елементів на нулі
+                }
             }
-            else
-            {
-                Console.WriteLine("Невірне введення! Будь ласка, введіть ціле число.");
-            }
-        }
 
-        return result;
+            // Якщо не знайшли жодного елемента в інтервалі, ставимо добуток 0
+            return foundInInterval ? product : 0;
+        }
     }
 }
