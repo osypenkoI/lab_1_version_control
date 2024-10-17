@@ -8,27 +8,24 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\osype\\.nuget\\packages\\": {}
+    "/Users/macbook/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\osype\\RiderProjects\\Laboratory1\\Laboratory1\\Laboratory1.csproj",
+      "projectUniqueName": "/Users/macbook/Desktop/lab_1_version_control_IlonaOsypenko/Laboratory1/Laboratory1/Laboratory1.csproj",
       "projectName": "Laboratory1",
-      "projectPath": "C:\\Users\\osype\\RiderProjects\\Laboratory1\\Laboratory1\\Laboratory1.csproj",
-      "packagesPath": "C:\\Users\\osype\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\osype\\RiderProjects\\Laboratory1\\Laboratory1\\obj\\",
+      "projectPath": "/Users/macbook/Desktop/lab_1_version_control_IlonaOsypenko/Laboratory1/Laboratory1/Laboratory1.csproj",
+      "packagesPath": "/Users/macbook/.nuget/packages/",
+      "outputPath": "/Users/macbook/Desktop/lab_1_version_control_IlonaOsypenko/Laboratory1/Laboratory1/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\osype\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/macbook/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -67,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

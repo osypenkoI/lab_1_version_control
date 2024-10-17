@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Laboratory1
-build_property.ProjectDir = C:\Users\osype\RiderProjects\Laboratory1\Laboratory1\
+build_property.ProjectDir = /Users/macbook/Desktop/lab_1_version_control_IlonaOsypenko/Laboratory1/Laboratory1/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

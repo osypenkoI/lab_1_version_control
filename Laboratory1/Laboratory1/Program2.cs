@@ -16,20 +16,17 @@ public class Program2
         Console.WriteLine("Найбільше значення масиву: {0}", maxElement);
         
         // Підраховуємо кількість повторень найбільшого значення
-        Console.WriteLine("Порядкові номери елементів з найбільшим значенням, які повторюються:");
+        Console.WriteLine("Порядкові номери елементів з найбільшим значенням:");
         int numOfRepeats = 0;
         for (int i = 0; i < arraySize; i++)
         {
             if (a[i] == maxElement)
             {
+                Console.WriteLine("a[{0}] = {1}", i, a[i]);
                 numOfRepeats++;
-                if (numOfRepeats > 1) // Умова, що виведення буде лише повторювальних номерів
-                {
-                    Console.WriteLine("a[{0}] = {1}", i, a[i]); // Тобто перший елемент не повторююється, тому і не виводиться
-                }
             }
         }
-        Console.WriteLine("Кількість повторень найбільшого значення: {0}", numOfRepeats-1);
+        Console.WriteLine("Кількість повторень найбільшого значення: {0}", numOfRepeats);
         
         // Упорядковуємо масив за спаданням
         Array.Sort(a); // Сортуємо за зростанням
@@ -38,8 +35,16 @@ public class Program2
         
         // Введення інтервалу (x, y]
         int x, y;
-        x = ReadIntValue("Введіть значення x: ");
-        y = ReadIntValue("Введіть значення y: ");
+        do
+        {
+            x = ReadIntValue("Введіть значення x: ");
+            y = ReadIntValue("Введіть значення y: ");
+            
+            if (x >= y)
+            {
+                Console.WriteLine("Помилка: значення x не може бути більшим або рівним y. Будь ласка, введіть правильні значення.");
+            }
+        } while (x >= y);  // Перевірка, щоб x був менший за y.
         
         // Знаходимо добуток елементів, що належать інтервалу (x, y]
         int product = 1;
@@ -67,13 +72,14 @@ public class Program2
         Console.WriteLine("\nДобуток елементів у інтервалі ({0}, {1}]: {2}", x, y, product);
         PrintArray("\nМасив після заміни елементів, що не належать інтервалу, на нулі:", a);
     }
+    
     // Метод для виведення масиву
-    public static void PrintArray(string header, int[] a) {
+    public static void PrintArray(string header, int[] a) 
+    {
         Console.WriteLine(header);
-        int i;
-        for (i = 0; i < a.Length; ++i)
+        foreach (int item in a)
         {
-            Console.Write("\t" + a[i]);
+            Console.Write("\t" + item);
         }
         Console.WriteLine();
     }
