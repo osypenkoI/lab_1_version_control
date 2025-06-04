@@ -12,3 +12,18 @@ C:\Users\osype\RiderProjects\Laboratory1\Laboratory1\obj\Debug\net8.0\refint\Lab
 C:\Users\osype\RiderProjects\Laboratory1\Laboratory1\obj\Debug\net8.0\Laboratory1.pdb
 C:\Users\osype\RiderProjects\Laboratory1\Laboratory1\obj\Debug\net8.0\Laboratory1.genruntimeconfig.cache
 C:\Users\osype\RiderProjects\Laboratory1\Laboratory1\obj\Debug\net8.0\ref\Laboratory1.dll
+F:\Забезпечення якості та контролю якості і тестування ПП\repository\lab_1_version_control\lab_1_version_control_osypenkoI\Laboratory1\Laboratory1\bin\Debug\net8.0\Laboratory1.exe
+F:\Забезпечення якості та контролю якості і тестування ПП\repository\lab_1_version_control\lab_1_version_control_osypenkoI\Laboratory1\Laboratory1\bin\Debug\net8.0\Laboratory1.deps.json
+F:\Забезпечення якості та контролю якості і тестування ПП\repository\lab_1_version_control\lab_1_version_control_osypenkoI\Laboratory1\Laboratory1\bin\Debug\net8.0\Laboratory1.runtimeconfig.json
+F:\Забезпечення якості та контролю якості і тестування ПП\repository\lab_1_version_control\lab_1_version_control_osypenkoI\Laboratory1\Laboratory1\bin\Debug\net8.0\Laboratory1.dll
+F:\Забезпечення якості та контролю якості і тестування ПП\repository\lab_1_version_control\lab_1_version_control_osypenkoI\Laboratory1\Laboratory1\bin\Debug\net8.0\Laboratory1.pdb
+F:\Забезпечення якості та контролю якості і тестування ПП\repository\lab_1_version_control\lab_1_version_control_osypenkoI\Laboratory1\Laboratory1\obj\Debug\net8.0\Laboratory1.GeneratedMSBuildEditorConfig.editorconfig
+F:\Забезпечення якості та контролю якості і тестування ПП\repository\lab_1_version_control\lab_1_version_control_osypenkoI\Laboratory1\Laboratory1\obj\Debug\net8.0\Laboratory1.AssemblyInfoInputs.cache
+F:\Забезпечення якості та контролю якості і тестування ПП\repository\lab_1_version_control\lab_1_version_control_osypenkoI\Laboratory1\Laboratory1\obj\Debug\net8.0\Laboratory1.AssemblyInfo.cs
+F:\Забезпечення якості та контролю якості і тестування ПП\repository\lab_1_version_control\lab_1_version_control_osypenkoI\Laboratory1\Laboratory1\obj\Debug\net8.0\Laboratory1.csproj.CoreCompileInputs.cache
+F:\Забезпечення якості та контролю якості і тестування ПП\repository\lab_1_version_control\lab_1_version_control_osypenkoI\Laboratory1\Laboratory1\obj\Debug\net8.0\Laboratory1.sourcelink.json
+F:\Забезпечення якості та контролю якості і тестування ПП\repository\lab_1_version_control\lab_1_version_control_osypenkoI\Laboratory1\Laboratory1\obj\Debug\net8.0\Laboratory1.dll
+F:\Забезпечення якості та контролю якості і тестування ПП\repository\lab_1_version_control\lab_1_version_control_osypenkoI\Laboratory1\Laboratory1\obj\Debug\net8.0\refint\Laboratory1.dll
+F:\Забезпечення якості та контролю якості і тестування ПП\repository\lab_1_version_control\lab_1_version_control_osypenkoI\Laboratory1\Laboratory1\obj\Debug\net8.0\Laboratory1.pdb
+F:\Забезпечення якості та контролю якості і тестування ПП\repository\lab_1_version_control\lab_1_version_control_osypenkoI\Laboratory1\Laboratory1\obj\Debug\net8.0\Laboratory1.genruntimeconfig.cache
+F:\Забезпечення якості та контролю якості і тестування ПП\repository\lab_1_version_control\lab_1_version_control_osypenkoI\Laboratory1\Laboratory1\obj\Debug\net8.0\ref\Laboratory1.dll
