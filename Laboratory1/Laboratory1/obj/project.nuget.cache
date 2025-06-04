@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "VGZsXDvJla8=",
+  "dgSpecHash": "Qzsa/8RKHLU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\osype\\RiderProjects\\Laboratory1\\Laboratory1\\Laboratory1.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "F:\\Забезпечення якості та контролю якості і тестування ПП\\repository\\lab_1_version_control\\lab_1_version_control_osypenkoI\\Laboratory1\\Laboratory1\\Laboratory1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Koska\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.11\\microsoft.netcore.app.ref.8.0.11.nupkg.sha512",
+    "C:\\Users\\Koska\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.11\\microsoft.windowsdesktop.app.ref.8.0.11.nupkg.sha512",
+    "C:\\Users\\Koska\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.11\\microsoft.aspnetcore.app.ref.8.0.11.nupkg.sha512",
+    "C:\\Users\\Koska\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.11\\microsoft.netcore.app.host.win-x64.8.0.11.nupkg.sha512"
+  ],
   "logs": []
 }
